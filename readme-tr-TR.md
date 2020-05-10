@@ -2,29 +2,29 @@
 
 <br/>
 
-# 👇 Why this guide can take your testing skills to the next level
+# 👇 Bu rehberin test becerilerinizi bir üst seviyeye çıkaracak olmasının nedenleri
 
 <br/>
 
-## 📗 45+ best practices: Super-comprehensive and exhaustive
+## 📗 45+ güzel örnek: Süper kapsamlı ve ayrıntılı
 
-This is a guide for JavaScript & Node.js reliability from A-Z. It summarizes and curates for you dozens of the best blog posts, books and tools the market has to offer
+Bu bir A'dan Z'ye JavaScript ve Node.js dayanıklılık rehberi. Birçok blog yazısı, kitap ve kaynağın arasından en iyilerinin seçilerek özetlenmesiyle oluşturuldu.
 
-## 🚢 Advanced: Goes 10,000 miles beyond the basics
+## 🚢 İleri seviye: Temelden başlayıp en ileri seviyeye kadar
 
-Hop into a journey that travels way beyond the basics into advanced topics like testing in production, mutation testing, property-based testing and many other strategic & professional tools. Should you read every word in this guide your testing skills are likely to go way above the average
+Temel hatlardan ileri seviyelere uzanan, prodüksiyon, mutasyon, özellik-tabanlı testler ve diğer birçok stratejik, profesyonel araçlar gibi ileri seviye konuların olduğu bir yolculuğa atılın. Bu rehberin her bir kelimesini dikkatlice okursanız test becerilerinizi ortalamanın çokça üzerine çıkarmanız gayet mümkün.
 
-## 🌐 Full-stack: front, backend, CI, anything
+## 🌐 Tam donanımlı: Frontend, backend, CI, her şey
 
-Start by understanding the ubiquitous testing practices that are the foundation for any application tier. Then, delve into your area of choice: frontend/UI, backend, CI or maybe all of them?
+Her hangi bir uygulama alanı için temel oluşturan örnek testleri anlayarak başlayın. Sonrasında, tericihinize yönelin: frontend/arayüz, backend, CI ya da hepsi mi birden?
 
 <br/>
 
-### Written By Yoni Goldberg
+### Yoni Goldberg tarafından kaleme alınanlar:
 
-- A JavaScript & Node.js consultant
-- 📗 [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com) - My comprehensive online course with more than [10 hours of video](https://www.testjavascript.com), 14 test types and more than 40 best practices
-- [Follow me on Twitter ](https://twitter.com/goldbergyoni/)
+- A JavaScript & Node.js danışmanı
+- 📗 [A'dan Z'ye Node.js & JavaScript Test Etmek](https://www.testjavascript.com) - [Toplamda 10 saatlik videolarla](https://www.testjavascript.com) kapsamlı online dersler, 14 test tipi ve 40'dan fazla iyi örnek
+- [Twitter'da takip edin ](https://twitter.com/goldbergyoni/)
 
 <br/>
 
@@ -37,54 +37,54 @@ Start by understanding the ubiquitous testing practices that are the foundation 
 
 <br/><br/>
 
-## `Table of Contents`
+## `İçindekiler`
 
-#### [`Section 0: The Golden Rule`](#section-0️⃣-the-golden-rule)
+#### [`Bölüm 0: Altın Kural`](#section-0️⃣-the-golden-rule)
 
-A single advice that inspires all the others (1 special bullet)
+Diğer hepsine ilham olan tek bir tavsiye (1 special bullet)
 
-#### [`Section 1: The Test Anatomy`](#section-1-the-test-anatomy-1)
+#### [`Bölüm 1: Testin Anatomisi`](#section-1-the-test-anatomy-1)
 
-The foundation - structuring clean tests (12 bullets)
+Temel yapı - açık ve anlaşılır testler inşa etmek (12 bullets)
 
-#### [`Section 2: Backend`](#section-2️⃣-backend-testing)
+#### [`Bölüm 2: Backend`](#section-2️⃣-backend-testing)
 
-Writing backend and Microservices tests efficiently (8 bullets)
+Etkili şekilde backend ve mikro servis testleri yazmak (8 bullets)
 
-#### [`Section 3: Frontend`](#section-3️⃣-frontend-testing)
+#### [`Bölüm 3: Frontend`](#section-3️⃣-frontend-testing)
 
-Writing tests for web UI including component and E2E tests (11 bullets)
+Elemanları da içeren web arayüzü ve E2E testleri yazmak (11 bullets)
 
-#### [`Section 4: Measuring Tests Effectiveness`](#section-4️⃣-measuring-test-effectiveness)
+#### [`Bölüm 4: Testlerin etkinliğini ölçmek`](#section-4️⃣-measuring-test-effectiveness)
 
-Watching the watchman - measuring test quality (4 bullets)
+Testlerin kalitesini "test" etmek (4 bullets)
 
-#### [`Section 5: Continuous Integration`](#section-5️⃣-ci-and-other-quality-measures)
+#### [`Bölüm 5: Devamlı Entegrasyon (CI)`](#section-5️⃣-ci-and-other-quality-measures)
 
-Guidelines for CI in the JS world (9 bullets)
+JS dünyası için CI kılavuzları (9 bullets)
 
 <br/><br/>
 
-# Section 0️⃣: The Golden Rule
+# Bölüm 0️⃣: Altın Kural
 
 <br/>
 
-## ⚪️ 0 The Golden Rule: Design for lean testing
+## ⚪️ 0 Altın Kural: Anlaşılır testler tasarlamak
 
 :white_check_mark: **Do:**
-Testing code is not like production-code - design it to be dead-simple, short, abstraction-free, flat, delightful to work with, lean. One should look at a test and get the intent instantly.
+Test kodları ürün kodları gibi değildir. Onları son derece basit, kısa, soyutlanmamış, düz ve üzerinde çalışması eğlenceli olacak şekilde tasarlayın. Testlere bakan herhangi biri çabucak amacı anlamalı.
 
-Our minds are full with the main production code, we don't have 'headspace' for additional complexity. Should we try to squeeze yet another challenging code into our poor brain it will slow the team down which works against the reason we do testing. Practically this is where many teams just abandon testing.
+Öyle ki, aklımız ana ürünün kodlarıyla tamamen dolu, ek bir karmaşıklık için yer yok. Zaten yorgun beyinlerimize zorlayıcı bir kod daha sıkıştırmaya çalışırsak, testlerin asıl sebebi (sağlıklı işleyen kodlar yazmak) için çalışan takımı yavaşlatmış oluruz. Pratikte bu, çoğu projede testlerden vazgeçilmesinin sebebi oluyor.
 
-The tests are an opportunity for something else - a friendly and smiley assistant, one that it's delightful to work with and delivers great value for such a small investment. Science tells us that we have two brain systems: system 1 is used for effortless activities like driving a car on an empty road and system 2 which is meant for complex and conscious operations like solving a math equation. Design your test for system 1, when looking at test code it should _feel_ as easy as modifying an HTML document and not like solving 2X(17 × 24).
+Testler başka şeyler için de bir fırsat - samimi ve güler yüzlü bir asistan; nispeten küçük bir çabaya karşılık büyük getiriler sunan, üzerinde çalışması büyük bir zevk. Bilim bize iki tür beyin sistemimiz olduğunu söylüyor: sistem 1 boş bir yolda araba sürmek gibi çaba gerektirmeyen aktiviteler için kullanılırken, sistem 2 ise bir matematik denklemi çözmek gibi karmaşık ve düşünmeyi gerektiren aktiviteler için kullanılıyor. Test kodlarınızı sistem 1 için tasarlayın ki onlara bakıldığında basit bir HTML dökümanını düzenliyormuş kadar _kolay_ hissettirsin, 2X(17 × 24) işlemini çözmeye çalışıyormuş gibi değil.
 
-This can be achieved by selectively cherry-picking techniques, tools and test targets that are cost-effective and provide great ROI. Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity.
+Bu sadeliği ve etkinliği, kullanacağınız teknikleri, araçları ve test hedeflerinizi özenle seçerek sağlayabilirsiniz. Sadece gereken kısımlar için testler tasarlayın, esnek tutmaya çalışın, bazen esneklik ve basitlik için bazı testleri es geçmeye değer.
 
-![alt text](/assets/headspace.png "We have no head room for additional complexity")
+![alt text](/assets/headspace.png "Beyinlerimizde fazladan karmaşıklık için yer yok")
 
-Most of the advice below are derivatives of this principle.
+Sıradaki tavsiyelerin çoğu bu sadelik prensibinin türevleri olacaktır.
 
-### Ready to start?
+### Başlamaya hazır mısınız?
 
 <br/><br/>
 
@@ -111,9 +111,9 @@ Most of the advice below are derivatives of this principle.
 **👇 Note:** Each bullet has code examples and sometime also an image illustration. Click to expand
 
 <details><summary>✏ <b>Code Examples</b></summary>
-  
+
 <br/>
-  
+
 ### :clap: Doing It Right Example: A test name that constitutes 3 parts
 
 ![](https://img.shields.io/badge/🔨%20Example%20using%20Mocha-blue.svg "Using Mocha to illustrate the idea")
@@ -1446,7 +1446,7 @@ Feature: Twitter new tweet
 ![](https://img.shields.io/badge/🔨%20Example%20using%20Wraith-blue.svg "Using Wraith")
 
 ```
-​# Add as many domains as necessary. Key will act as a label​
+# Add as many domains as necessary. Key will act as a label​
 
 domains:
   english: "http://www.mysite.com"​
