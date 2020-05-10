@@ -80,7 +80,7 @@ Testler başka şeyler için de bir fırsat - samimi ve güler yüzlü bir asist
 
 Bu sadeliği ve etkinliği, kullanacağınız teknikleri, araçları ve test hedeflerinizi özenle seçerek sağlayabilirsiniz. Sadece gereken kısımlar için testler tasarlayın, esnek tutmaya çalışın, bazen esneklik ve basitlik için bazı testleri es geçmeye değer.
 
-![alt text](/assets/headspace.png "Beyinlerimizde fazladan karmaşıklık için yer yok")
+![alt text](/assets/tr-TR/headspace.png "Beyinlerimizde fazladan karmaşıklık için yer yok")
 
 Sıradaki tavsiyelerin çoğu bu sadelik prensibinin türevleri olacaktır.
 
